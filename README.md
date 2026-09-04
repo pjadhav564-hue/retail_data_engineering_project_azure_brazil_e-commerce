@@ -132,27 +132,101 @@ etc.
 Gold data is optimized for business analysis, dashboards, reporting, and KPIs.
 
 
-## Gold Model
-
-### Dimensions
-- dim_customer
-- dim_product
-- dim_seller
-- dim_category
-- dim_date
-
-### Fact
-- fact_orders
-
 ## Key Transformations
 
-- Data cleansing
+- Data cleaning
 - Null handling
 - Duplicate removal
 - String standardization
 - Data type casting
 - Joins
-- SCD implementation
+- SCD1 and SCD2 implementation
 - Business transformations
 
-## Project Structure
+### Project Structure
+
+retail-data-engineering-project/
+│
+├── README.md
+├── .gitignore
+│
+├── notebooks/
+│   │
+│   ├── bronze/
+│   │   └── bronze_ingestion.py
+│   │
+│   ├── silver/
+│   │   ├── silver_customers.py
+│   │   ├── silver_orders.py
+│   │   ├── silver_order_items.py
+│   │   ├── silver_payments.py
+│   │   ├── silver_products.py
+│   │   ├── silver_sellers.py
+│   │   ├── silver_reviews.py
+│   │   ├── silver_geolocation.py
+│   │   └── silver_category_translation.py
+│   │
+│   └── gold/
+│       │
+│       ├── dimensions/
+│       │   ├── dim_customers.py
+│       │   ├── dim_product.py
+│       │   ├── dim_seller.py
+│       │   ├── dim_category.py
+│       │   └── dim_date.py
+│       │
+│       └── facts/
+│           └── fact_orders.py
+│
+├── src/
+│   └── functions.py
+│
+├── sql/
+│   └── business_queries.sql
+│
+└── docs/
+    └── architecture.png
+
+
+Layer Responsibilities
+
+Bronze Layer
+
+Raw data ingestion
+Source data preservation
+Ingestion metadata
+
+Silver Layer
+
+Data cleaning and transformation
+Null and duplicate handling
+Schema and column standardization
+Data type conversion
+String and whitespace cleansing
+Data validation and filtering
+Joins and data enrichment
+silver_geolocation
+silver_category_translation
+
+## Gold Layer
+
+## 1. Dimension Tables
+
+Read and prepare dim_customers
+Read and prepare dim_product
+Read and prepare dim_seller
+Read and prepare dim_category
+Create dim_date as a derived/calculated date dimension
+
+## 2. Fact Table
+
+Create fact_orders
+Integrate required dimension and Silver-layer data
+Generate business-ready order-level analytical data
+
+# SCD Implementation
+
+SCD Type 1: Applied where historical changes do not need to be maintained.
+SCD Type 2: Applied where historical changes need to be tracked using effective dates/versioning.
+
+The Gold layer provides business-ready dimensional and fact data for analytics, reporting, and decision-making.
