@@ -1,6 +1,18 @@
-### retail_data_engineering_project_azure_brazil_e-commerce
+# retail_data_engineering_project_azure_brazil_e-commerce
 
-End-to-end Retail Data Engineering project using Azure Databricks, PySpark, SQL &amp; Delta Lake. Implements Bronze, Silver &amp; Gold layers, with Silver focused on data cleaning, validation, transformation and quality. Gold delivers business-ready fact and dimension tables for analytics and reporting.
+## Name : Pratik jadhav
+
+## Course: Data Engineering
+
+## Subject: Brazilian E-commerce Data Engineering
+
+## Tool Used: Azure Databricks, PySpark, SQL, Delta Lake, Azure Data Lake Storage, GitHub
+
+
+## Introduction
+This project is an end-to-end Brazilian E-commerce Data Engineering solution built using Azure Databricks, PySpark, SQL, and Delta Lake.
+It processes raw e-commerce data through Bronze, Silver, and Gold layers, where data is cleaned, transformed, and prepared for business analysis.
+The final Gold layer provides business-ready dimension and fact tables that can be used for reporting, analytics, and decision-making.
 
 ## Project Overview
 
@@ -57,9 +69,9 @@ azure_b3
 - Azure
 - Git/GitHub
 
-### Data Layers
+## Data Layers
 
-## 1. Landing Layer
+### 1. Landing Layer
 
 Purpose: Store incoming source data before processing.
 
@@ -70,7 +82,7 @@ Data is kept close to the original source format.
 Minimal or no transformation.
 Acts as the initial ingestion area.
 
-## 2. Bronze Layer
+### 2. Bronze Layer
 
 Purpose: Store raw/ingested data in a structured and managed format.
 
@@ -82,7 +94,7 @@ Preserve source-level information.
 Add ingestion metadata where required.
 Provides a reliable base for downstream processing.
 
-## 3. Silver Layer
+### 3. Silver Layer
 
 Purpose: Create clean, validated, and standardized data.
 
@@ -101,20 +113,17 @@ Validate records
 Apply business rules
 Perform joins between related datasets
 
-This is where your main data cleansing and transformation happens.
-
-## 4. Gold Layer
+### 4. Gold Layer
 
 Purpose: Create business-ready data for analytics and reporting.
 
 gold
 └── business_ready
 
-Your Gold layer can contain:
 
-# Gold Model
+## Gold Model
 
-# Dimensions
+### Dimensions
 
 dim_customer
 dim_product
@@ -122,7 +131,7 @@ dim_seller
 dim_category
 dim_date
 
-# Facts
+### Facts
 
 fact_orders
 fact_order_items
@@ -143,7 +152,7 @@ Gold data is optimized for business analysis, dashboards, reporting, and KPIs.
 - SCD1 and SCD2 implementation
 - Business transformations
 
-### Project Structure
+## Project Structure
 
 retail-data-engineering-project/
 │
@@ -188,29 +197,29 @@ retail-data-engineering-project/
     └── architecture.png
 
 
-Layer Responsibilities
+## Layer Responsibilities
 
-Bronze Layer
+### Bronze Layer
 
-Raw data ingestion
-Source data preservation
-Ingestion metadata
+- Raw data ingestion
+- Source data preservation
+- Ingestion metadata
 
-Silver Layer
+### Silver Layer
 
-Data cleaning and transformation
-Null and duplicate handling
-Schema and column standardization
-Data type conversion
-String and whitespace cleansing
-Data validation and filtering
-Joins and data enrichment
-silver_geolocation
-silver_category_translation
+- Data cleaning and transformation
+- Null and duplicate handling
+- Schema and column standardization
+- Data type conversion
+- String and whitespace cleansing
+- Data validation and filtering
+- Joins and data enrichment
+- silver_geolocation
+- silver_category_translation
 
 ## Gold Layer
 
-## 1. Dimension Tables
+### 1. Dimension Tables
 
 Read and prepare dim_customers
 Read and prepare dim_product
@@ -218,15 +227,22 @@ Read and prepare dim_seller
 Read and prepare dim_category
 Create dim_date as a derived/calculated date dimension
 
-## 2. Fact Table
+### 2. Fact Table
 
 Create fact_orders
 Integrate required dimension and Silver-layer data
 Generate business-ready order-level analytical data
 
-# SCD Implementation
+## SCD Implementation
 
 SCD Type 1: Applied where historical changes do not need to be maintained.
 SCD Type 2: Applied where historical changes need to be tracked using effective dates/versioning.
 
 The Gold layer provides business-ready dimensional and fact data for analytics, reporting, and decision-making.
+
+
+## Screenshots
+
+### Azure Databricks Catalog
+<img width="1583" height="527" alt="image" src="https://github.com/user-attachments/assets/3b217027-a598-4f42-a35f-ab4984f47961" />
+
