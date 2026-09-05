@@ -243,6 +243,22 @@ The Gold layer provides business-ready dimensional and fact data for analytics, 
 
 ## Screenshots
 
-### Azure Databricks Catalog
+## Azure Databricks Catalog
 <img width="1583" height="527" alt="image" src="https://github.com/user-attachments/assets/3b217027-a598-4f42-a35f-ab4984f47961" />
+
+## BRONZE LAYER – RAW INGESTION 
+<img width="1346" height="683" alt="image" src="https://github.com/user-attachments/assets/9aea5a8f-433e-46ce-9210-60f3861cf2ef" />
+<img width="1403" height="591" alt="image" src="https://github.com/user-attachments/assets/21682b5e-2d5b-4ae3-90c8-91c3623d8285" />
+
+## SILVER LAYER - data cleaning and validation 
+<img width="1413" height="573" alt="image" src="https://github.com/user-attachments/assets/3bc9f7e8-b643-4b6d-a150-ae2f1b37ba4d" />
+
+
+
+## GOLD LAYER - business ready
+<img width="1477" height="700" alt="image" src="https://github.com/user-attachments/assets/45c497f8-05d1-4740-b763-b3517d92e06b" />
+
+
+
+
 
