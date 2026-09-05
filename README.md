@@ -1,6 +1,6 @@
 # retail_data_engineering_project_azure_brazil_e-commerce
 
-## Name : Pratik jadhav
+## Name : Pratik Jadhav
 
 ## Course: Data Engineering
 
