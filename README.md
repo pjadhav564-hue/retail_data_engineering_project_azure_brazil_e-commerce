@@ -205,7 +205,7 @@ retail-data-engineering-project/
 - Source data preservation
 - Ingestion metadata
 
-### Silver Layer
+### Silver layer
 
 - Data cleaning and transformation
 - Null and duplicate handling
